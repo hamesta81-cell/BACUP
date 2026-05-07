@@ -695,6 +695,10 @@ async function loadBookings() {
         <tr>
             <td>${b.id}</td>
             <td class="accent-green">${b.user_name}</td>
+            <td>
+                ${b.booker_name || '<span style="opacity:0.5;">미입력</span>'}<br>
+                <span style="font-size:0.75rem; color:var(--text-secondary);">${b.booker_phone || ''}</span>
+            </td>
             <td>${b.date} ${b.time_start}</td>
             <td>${b.location}</td>
             <td style="font-weight: 800;">

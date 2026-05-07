@@ -940,11 +940,24 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return;
             }
 
+            const bookerNameInput = document.getElementById('booker-name-input') as HTMLInputElement;
+            const bookerPhoneInput = document.getElementById('booker-phone-input') as HTMLInputElement;
+
+            const bookerName = bookerNameInput ? bookerNameInput.value.trim() : '';
+            const bookerPhone = bookerPhoneInput ? bookerPhoneInput.value.trim() : '';
+
+            if (!bookerName || !bookerPhone) {
+                alert('예약자 이름과 연락처를 모두 입력해주세요.');
+                return;
+            }
+
             try {
                 const result = await postData('/bookings/multi', {
                     slotIds: Array.from(selectedSlots),
                     counts: counts,
-                    totalPrice: calculateFinalPrice()
+                    totalPrice: calculateFinalPrice(),
+                    bookerName,
+                    bookerPhone
                 });
 
                 if (result.success) {

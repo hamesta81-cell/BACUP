@@ -31,19 +31,21 @@ CREATE TABLE IF NOT EXISTS timeslots (
     price_child INTEGER
 );
 
--- Bookings Table
-CREATE TABLE IF NOT EXISTS bookings (
+-- Bookings table
+CREATE TABLE bookings (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-    slot_id INTEGER REFERENCES timeslots(id) ON DELETE CASCADE,
-    status TEXT DEFAULT 'PENDING', -- PENDING, PAID, REFUNDED, NOSHOW
-    paid_at TIMESTAMPTZ,
-    refunded_at TIMESTAMPTZ,
+    slot_id INT REFERENCES timeslots(id) ON DELETE CASCADE,
+    status TEXT DEFAULT 'PENDING' CHECK (status IN ('PENDING', 'PAID', 'REFUNDED', 'NOSHOW')),
+    booker_name TEXT,
+    booker_phone TEXT,
+    paid_at TIMESTAMP WITH TIME ZONE,
+    refunded_at TIMESTAMP WITH TIME ZONE,
     checked_in BOOLEAN DEFAULT FALSE,
-    checked_in_at TIMESTAMPTZ,
-    team_id TEXT, -- RED, BLUE
-    squad_num INTEGER, -- 1 to 8
-    created_at TIMESTAMPTZ DEFAULT NOW()
+    checked_in_at TIMESTAMP WITH TIME ZONE,
+    team_id TEXT CHECK (team_id IN ('RED', 'BLUE') OR team_id IS NULL),
+    squad_num INT CHECK (squad_num BETWEEN 1 AND 8 OR squad_num IS NULL),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Missions Table

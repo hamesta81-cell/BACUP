@@ -1199,3 +1199,5 @@ app.post('/api/admin/events/matches/save', async (req, res) => {
 app.listen(port, () => {
     console.log(`K서바이벌스포츠클럽 Backend running with Supabase at port ${port}`);
 });
+
+export default app;

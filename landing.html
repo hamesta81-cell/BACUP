@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K서바이벌스포츠클럽 | 가상과 현실의 경계</title>
+    <title>K서바이벌스포츠클럽 | TACTICAL HUD OS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -14,123 +14,132 @@
 <body>
     <div class="glow-bg"></div>
     <div class="scanline"></div>
+    <div class="hud-overlay"></div>
 
     <nav class="glass-nav">
         <div class="logo">
-            <span class="accent-purple">K-SURVIVAL</span> <span class="accent-green">SPORTS</span>
+            <span class="text-primary">K-SURVIVAL</span> <span class="accent-green">SPORTS</span>
         </div>
         <div class="nav-links">
-            <a href="#features">주요미션</a>
-            <a href="#ranks">대원등급</a>
-            <a href="#competitions">서바이벌 대회</a>
-            <a href="#program">프로그램 일정</a>
-            <a href="/index.html" class="cta-pill">지금 시작하기</a>
+            <a href="#features">MODULES</a>
+            <a href="#ranks">CLEARANCE</a>
+            <a href="#competitions">PROTOCOLS</a>
+            <a href="#program">TIMELINE</a>
+            <a href="/index.html" class="cta-pill">INITIATE_OP</a>
         </div>
     </nav>
 
     <main>
         <section class="hero">
+            <div class="hero-bg-data">
+                LAT: 37.5665° N<br>
+                LONG: 126.9780° E<br>
+                ELEV: 38M<br>
+                <br>
+                STATUS: SECURE<br>
+                ENCRYPTION: 256-BIT<br>
+                ACCESS: RESTRICTED
+            </div>
+            
             <div class="hero-content">
-                <h2 class="badge">MISSION START</h2>
+                <h2 class="badge">MISSION START : OP_OMEGA</h2>
                 <h1>미래의 전투가<br><span class="gradient-text">여기에서 시작된다</span></h1>
-                <p>현실을 넘나드는 레이저태그 경기 예약, 실시간 랭킹 시스템, 그리고 주간 미션까지. 당신의 스쿼드와 함께 정상을 향해 나아가세요.</p>
+                <p>현실을 넘나드는 레이저태그 경기 예약, 실시간 랭킹 시스템, 그리고 택티컬 미션. 스쿼드와 함께 최강의 전투력을 증명하십시오.</p>
                 <div class="hero-actions">
-                    <a href="/index.html" class="btn-primary">대시보드 입장하기</a>
-                    <a href="#features" class="btn-outline">기능 살펴보기</a>
+                    <a href="/index.html" class="btn-primary">작전 투입 (DASHBOARD)</a>
+                    <a href="#features" class="btn-outline">제원 확인 (FEATURES)</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="floating-card">
-                    <div class="card-inner">
-                        <div class="rank-up">RANK UP!</div>
-                        <div class="level">Lv. 99 MASTER</div>
-                    </div>
+                <div class="tactical-radar">
+                    <div class="radar-sweep"></div>
+                    <div class="target-lock"></div>
                 </div>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="section-title">
-                <h3>주요 미션 제어</h3>
-                <p>성장을 위한 최적의 도구들</p>
+                <h3>작전 통제 모듈</h3>
+                <p>시스템 자원 및 전술 지원 도구 (SYSTEM RESOURCES & TACTICAL SUPPORT)</p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="icon">📅</div>
-                    <h4>지능형 예약</h4>
-                    <p>원하는 시간대를 실시간으로 확인하고 즉시 예약하세요. 스쿼드 인원을 고려한 최적의 매칭 시스템 지원.</p>
+                    <div class="icon">[ T-SYNC ]</div>
+                    <h4>지능형 예약망</h4>
+                    <p>원하는 작전 시간을 실시간으로 스캔하고 즉시 투입 경로를 확보하십시오. 스쿼드 인원을 고려한 지능형 매칭 통신 지원.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">🏆</div>
-                    <h4>다차원 랭킹</h4>
-                    <p>개인, 팀, 가족, 태권도장까지. 다양한 카테고리에서 명예의 전당 상위권을 노리세요.</p>
+                    <div class="icon">[ R-NET ]</div>
+                    <h4>다차원 랭킹 체계</h4>
+                    <p>개인, 팀, 가족, 소속 부대(태권도장 등) 기반의 종합 전력망. 모든 전적은 명예의 전당 서버에 즉시 동기화됩니다.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">⚡</div>
-                    <h4>XP 성장 시스템</h4>
-                    <p>경기를 뛸 때마다 쌓이는 경험치. 등급을 올리고 전설적인 정찰병으로 거듭나세요.</p>
+                    <div class="icon">[ XP-LOG ]</div>
+                    <h4>전투 로그 (XP) 시스템</h4>
+                    <p>작전 수행 시 발생하는 모든 교전 데이터가 경험치로 축적됩니다. 킬/데스 비율과 미션 기여도에 따라 등급이 상승합니다.</p>
                 </div>
             </div>
         </section>
 
         <section id="ranks" class="ranks">
             <div class="section-title">
-                <h3>대원 등급 체계</h3>
-                <p>전장에서의 공헌도에 따라 주어지는 특별한 권한</p>
+                <h3>보안 접근 등급 체계</h3>
+                <p>전공에 따라 자동 부여되는 시스템 권한 (SECURITY CLEARANCE LEVELS)</p>
             </div>
             <div class="rank-grid">
                 <div class="rank-card scout">
-                    <div class="rank-icon">🎖️</div>
+                    <div class="rank-icon">[ 01 ]</div>
                     <div class="rank-info">
                         <h4>SCOUT</h4>
                         <p class="req">0 - 999 XP</p>
                         <ul class="benefits">
-                            <li>기본 커뮤니티 접근</li>
-                            <li>기초 미션 참여 권한</li>
+                            <li>기본 전술망 접근</li>
+                            <li>기초 훈련 작전 참여</li>
                         </ul>
                     </div>
                 </div>
                 <div class="rank-card soldier">
-                    <div class="rank-icon">⚔️</div>
+                    <div class="rank-icon">[ 02 ]</div>
                     <div class="rank-info">
                         <h4>SOLDIER</h4>
                         <p class="req">1,000 - 2,999 XP</p>
                         <ul class="benefits">
-                            <li>매치 예약 5% 할인</li>
-                            <li>정규 리그 참여 가능</li>
+                            <li>군수품(예약) 5% 비용 절감</li>
+                            <li>정규 작전 참여 권한</li>
                         </ul>
                     </div>
                 </div>
                 <div class="rank-card veteran">
-                    <div class="rank-icon">🦅</div>
+                    <div class="rank-icon">[ 03 ]</div>
                     <div class="rank-info">
                         <h4>VETERAN</h4>
                         <p class="req">3,000 - 6,999 XP</p>
                         <ul class="benefits">
-                            <li>매치 예약 10% 할인</li>
-                            <li>장비 우선 선택권</li>
+                            <li>군수품(예약) 10% 비용 절감</li>
+                            <li>고성능 장비 우선 보급</li>
                         </ul>
                     </div>
                 </div>
                 <div class="rank-card elite">
-                    <div class="rank-icon">⚡</div>
+                    <div class="rank-icon">[ 04 ]</div>
                     <div class="rank-info">
                         <h4>ELITE</h4>
                         <p class="req">7,000 - 14,999 XP</p>
                         <ul class="benefits">
-                            <li>한정판 굿즈 구매권</li>
-                            <li>특별 매치 단독 초대</li>
+                            <li>전용 전술 장비(굿즈) 열람</li>
+                            <li>특수 보안 작전 단독 초대</li>
                         </ul>
                     </div>
                 </div>
                 <div class="rank-card legend">
-                    <div class="rank-icon">👑</div>
+                    <div class="rank-icon">[ 05 ]</div>
                     <div class="rank-info">
                         <h4>LEGEND</h4>
                         <p class="req">15,000+ XP</p>
                         <ul class="benefits">
-                            <li>명예의 전당 등재</li>
-                            <li>VIP 이벤트 무료 참가</li>
+                            <li>최고 사령관 명예의 전당</li>
+                            <li>VIP 블랙오퍼레이션 무상 투입</li>
                         </ul>
                     </div>
                 </div>
@@ -139,110 +148,116 @@
 
         <section id="competitions" class="competitions">
             <div class="section-title">
-                <h3>레이저태그 <span class="accent-purple">서바이벌 대회</span></h3>
-                <p>스쿼드의 명예를 걸고 전장에 참여하세요</p>
+                <h3>규격화 교전 수칙</h3>
+                <p>가용 가능한 전술 대항전 프로토콜 (AUTHORIZED ENGAGEMENT PROTOCOLS)</p>
             </div>
             <div class="comp-grid">
                 <div class="comp-card">
-                    <div class="comp-tag">TEAM</div>
-                    <h4>팀 대항전</h4>
-                    <p>3-10인의 정예 요원으로 구성된 스쿼드 간의 치열한 전술 대결. 시즌별 최고 GP 팀에게 본선 진출권 부여.</p>
+                    <div class="comp-tag">SQD-OP</div>
+                    <h4>스쿼드 대항전</h4>
+                    <p>3-10인의 최정예 에이전트로 구성된 스쿼드 간의 교전. 전술 기동과 팀워크가 승패를 결정지으며, 최상위 팀은 본선 진출권을 확보합니다.</p>
                 </div>
                 <div class="comp-card">
-                    <div class="comp-tag">FAMILY</div>
-                    <h4>가족 리그</h4>
-                    <p>부모와 자녀가 함께 참여하는 챌린지. 세대 간의 협동심이 승패를 가르는 가장 따뜻하고 짜릿한 전장.</p>
+                    <div class="comp-tag">FAM-OP</div>
+                    <h4>패밀리 전술 훈련</h4>
+                    <p>부모와 자녀가 한 조를 이루어 투입되는 특수 훈련. 세대 간의 통신과 협동이 요구되는 챌린지로, 승리 시 특별 포상 포인트가 지급됩니다.</p>
                 </div>
                 <div class="comp-card">
-                    <div class="comp-tag">DOJO</div>
-                    <h4>도장 대항전</h4>
-                    <p>태권도장 및 체육관 단위의 대규모 점령전. 지역 최강 타이틀과 함께 특별 보너스 XP 혜택 지급.</p>
+                    <div class="comp-tag">DIV-OP</div>
+                    <h4>소속 부대(도장) 점령전</h4>
+                    <p>도장 및 단체 간의 대규모 전면전. 섹터를 장악하고 아군의 영역을 넓히십시오. 우승 부대에는 막대한 전술 지원 포인트(XP)가 하달됩니다.</p>
                 </div>
             </div>
             <div class="comp-footer">
                 <div class="comp-mechanic">
-                    <strong>GP(Group Point) 획득 방식:</strong>
-                    <span>개인 획득 XP의 10% 자동 적립 + 대회 승리 시 특별 보너스 포인트</span>
+                    <strong>GP (Group Point) 배분 로직:</strong>
+                    <span>개인 획득 XP의 10% 자동 적립 + 작전 성공(승리) 시 막대한 보너스 데이터 전송</span>
                 </div>
             </div>
         </section>
 
         <section id="program" class="program">
             <div class="section-title">
-                <h3>서바이벌 <span class="accent-green">프로그램 일정</span></h3>
-                <p>150분간 펼쳐지는 극한의 서바이벌 타임라인</p>
+                <h3>표준 작전 타임라인</h3>
+                <p>T-0 부터 T-150 까지의 상세 작전 계획서 (STANDARD OPERATION TIMELINE)</p>
             </div>
             <div class="program-container">
                 <div class="program-steps">
                     <div class="program-step-card">
-                        <div class="step-num">01</div>
-                        <div class="step-time">00-20 min</div>
+                        <div class="step-num-container">
+                            <div class="step-num">PHASE.1</div>
+                            <div class="step-time">00-20 MIN</div>
+                        </div>
                         <div class="step-content">
-                            <h4>에이전트 소집</h4>
-                            <p>QR 체크인, 8인 1조 팀 편성, 장비 지급 및 영점 사격</p>
+                            <h4>에이전트 소집 및 브리핑</h4>
+                            <p>전술망(QR) 체크인, 8인 1조 스쿼드 편성, 장비 수령 및 영점 사격 실시</p>
                             <div class="step-reward">
-                                <span class="icon">👥</span>
-                                <span class="label">가족/단체 팀 등록</span>
+                                <span class="label">[ SYSTEM ] 통신 연결 완료</span>
                             </div>
                         </div>
                     </div>
                     <div class="program-step-card">
-                        <div class="step-num">02</div>
-                        <div class="step-time">20-50 min</div>
+                        <div class="step-num-container">
+                            <div class="step-num">PHASE.2</div>
+                            <div class="step-time">20-50 MIN</div>
+                        </div>
                         <div class="step-content">
-                            <h4>[1단계] 8:8 팀전</h4>
-                            <p>팀워크 위주의 점령전 또는 섬멸전 우선 실시</p>
+                            <h4>초기 전면전 (8 vs 8)</h4>
+                            <p>기본 화력망 테스트. 팀워크 위주의 거점 점령전 또는 적군 섬멸 작전 전개</p>
                             <div class="step-reward">
-                                <span class="icon">📊</span>
-                                <span class="label">팀 승률 실시간 기록</span>
+                                <span class="label">[ LOG ] 교전 데이터 수집 중</span>
                             </div>
                         </div>
                     </div>
                     <div class="program-step-card">
-                        <div class="step-num">03</div>
-                        <div class="step-time">50-80 min</div>
+                        <div class="step-num-container">
+                            <div class="step-num">PHASE.3</div>
+                            <div class="step-time">50-80 MIN</div>
+                        </div>
                         <div class="step-content">
-                            <h4>[2단계] VIP 제거전</h4>
-                            <p>우리 팀 VIP를 지키며 상대 VIP를 사냥하는 전략 팀전</p>
+                            <h4>HVT (중요 표적) 호위 작전</h4>
+                            <p>아군 VIP를 적의 공격으로부터 방어하며, 적진의 VIP를 무력화하는 고도 전술 훈련</p>
                             <div class="step-reward">
-                                <span class="icon">🎯</span>
-                                <span class="label">팀 전략 점수 부여</span>
+                                <span class="label">[ REWARD ] 전술 점수 산정</span>
                             </div>
                         </div>
                     </div>
                     <div class="program-step-card">
-                        <div class="step-num">04</div>
-                        <div class="step-time">80-110 min</div>
+                        <div class="step-num-container">
+                            <div class="step-num">PHASE.4</div>
+                            <div class="step-time">80-110 MIN</div>
+                        </div>
                         <div class="step-content">
-                            <h4>[3단계] 개인 데스매치</h4>
-                            <p>8:8 동료가 이제는 적! 개인의 한계를 시험하는 무한 난전</p>
+                            <h4>생존 본능 (FFA)</h4>
+                            <p>식별 코드 해제. 전장 내 모든 에이전트가 적대 세력으로 전환되는 극한의 생존 난전</p>
                             <div class="step-reward">
-                                <span class="icon">📈</span>
-                                <span class="label">개인별 랭킹 업데이트</span>
+                                <span class="label">[ ALERT ] 개인 전투력 평가 반영</span>
                             </div>
                         </div>
                     </div>
                     <div class="program-step-card">
-                        <div class="step-num">05</div>
-                        <div class="step-time">110-140 min</div>
+                        <div class="step-num-container">
+                            <div class="step-num">PHASE.5</div>
+                            <div class="step-time">110-140 MIN</div>
+                        </div>
                         <div class="step-content">
-                            <h4>[4단계] 4인 토너먼트</h4>
-                            <p>개인전 상위권 또는 가족 단위 4인조 최종 결선</p>
+                            <h4>최종 결선 토너먼트</h4>
+                            <p>생존자 상위권 또는 정예 스쿼드 단위의 파이널 데스매치. 구역의 주인을 결정짓는 마지막 교전</p>
                             <div class="step-reward">
-                                <span class="icon">👑</span>
-                                <span class="label">최종 우승팀 확정</span>
+                                <span class="label">[ MISSION ] 타겟 마크 확인</span>
                             </div>
                         </div>
                     </div>
                     <div class="program-step-card highlight">
-                        <div class="step-num">06</div>
-                        <div class="step-time">140-150 min</div>
+                        <div class="step-num-container">
+                            <div class="step-num">PHASE.6</div>
+                            <div class="step-time">140-150 MIN</div>
+                        </div>
                         <div class="step-content">
-                            <h4>시상 및 정산</h4>
-                            <p>MVP 및 우승팀 시상, 포인트 적립 및 차기 예약</p>
+                            <h4>작전 종료 및 결과 송출</h4>
+                            <p>MVP 및 우승 스쿼드 시상, 전술 데이터(XP) 개인 단말기로 최종 다운로드 및 복귀</p>
                             <div class="step-reward">
-                                <span class="icon">💎</span>
-                                <span class="label">리워드 포인트 즉시 지급</span>
+                                <span class="label">[ UPLOAD ] 경험치 적립 완료</span>
                             </div>
                         </div>
                     </div>
@@ -251,30 +266,30 @@
         </section>
 
         <section class="battlefield-showcase">
-            <h2 class="section-title">주요 <span class="accent-green">배틀필드</span> 소개</h2>
+            <h2 class="section-title">작전 투입 구역</h2>
             <div class="battlefield-grid">
                 <div class="battle-card">
                     <img src="/assets/battlefield_seoul_a.webp" alt="서울 A 월드">
                     <div class="battle-info">
-                        <h3>서울 A 월드</h3>
-                        <p>네온 무드와 사이버펑크 스타일의 실내 전장. 도심 속 극한의 긴장감을 선사합니다.</p>
-                        <span class="tag">#실내 #네온 #기술</span>
+                        <h3>SECTOR A (SEOUL)</h3>
+                        <p>사이버펑크 테마가 적용된 고밀도 실내 교전 구역. 어두운 시야 속에서 근접 전술(CQB) 능력이 시험받습니다.</p>
+                        <span class="tag">#CQB</span><span class="tag">#NEON</span>
                     </div>
                 </div>
                 <div class="battle-card">
                     <img src="/assets/battlefield_gimpo_b.webp" alt="김포 B 대전장">
                     <div class="battle-info">
-                        <h3>김포 B 대전장</h3>
-                        <p>대형 컨테이너와 거친 매력을 가진 산업지구 테마. 대규모 팀 서바이벌에 최적화되어 있습니다.</p>
-                        <span class="tag">#공장테마 #팀매치 #전략</span>
+                        <h3>SECTOR B (GIMPO)</h3>
+                        <p>컨테이너와 폐공장이 얽힌 산업지구 맵. 장애물이 많아 엄폐 및 우회 기동을 적극 활용해야 하는 전략적 요충지입니다.</p>
+                        <span class="tag">#INDUSTRIAL</span><span class="tag">#TACTICAL</span>
                     </div>
                 </div>
                 <div class="battle-card">
                     <img src="/assets/battlefield_hanam_c.webp" alt="하남 필드 C">
                     <div class="battle-info">
-                        <h3>하남 필드 C</h3>
-                        <p>자연 속에서 즐기는 아웃도어 택티컬 필드. 탁 트인 시야와 지형지물을 활용한 전투가 특징입니다.</p>
-                        <span class="tag">#야외 #숲 #전술</span>
+                        <h3>SECTOR C (HANAM)</h3>
+                        <p>탁 트인 야외 삼림 구역. 고지대 점령과 사거리 확보가 승패를 가르는 스나이핑 특화 필드입니다.</p>
+                        <span class="tag">#OUTDOOR</span><span class="tag">#SNIPE</span>
                     </div>
                 </div>
             </div>
@@ -282,7 +297,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 K서바이벌스포츠클럽. All Rights Reserved.</p>
+        <p>SECURE CONNECTION ESTABLISHED. &copy; 2026 K-SURVIVAL SPORTS. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script>

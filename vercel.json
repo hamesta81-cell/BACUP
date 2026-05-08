@@ -10,10 +10,7 @@
         },
         {
             "src": "server.js",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [".env"]
-            }
+            "use": "@vercel/node"
         }
     ],
     "rewrites": [

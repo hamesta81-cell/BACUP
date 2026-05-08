@@ -257,7 +257,7 @@ app.get('/api/rankings/:category', async (req, res) => {
 });
 
 app.post('/api/bookings/multi', async (req, res) => {
-    const { slotIds, counts, totalPrice, userId } = req.body;
+    const { slotIds, counts, totalPrice, userId, bookerName, bookerPhone } = req.body;
     if (!userId) return res.status(401).json({ success: false, message: '로그인이 필요합니다.' });
 
     const totalPeople = (counts.adult || 0) + (counts.youth || 0) + (counts.child || 0);
@@ -286,7 +286,13 @@ app.post('/api/bookings/multi', async (req, res) => {
 
             await supabaseAdmin
                 .from('bookings')
-                .insert({ user_id: userId, slot_id: slotId, status: 'PENDING' });
+                .insert({ 
+                    user_id: userId, 
+                    slot_id: slotId, 
+                    status: 'PENDING',
+                    booker_name: bookerName || null,
+                    booker_phone: bookerPhone || null
+                });
         }
 
         res.json({ success: true, message: '예약 신청이 완료되었습니다. 입금 확인 후 확정됩니다!' });
@@ -618,24 +624,43 @@ app.get('/api/admin/stats', async (req, res) => {
 });
 
 app.get('/api/admin/bookings', async (req, res) => {
-    const { data: bookings } = await supabaseAdmin
+    const { location, status, date } = req.query;
+
+    let query = supabaseAdmin
         .from('bookings')
         .select(`
             id,
+            status,
+            booker_name,
+            booker_phone,
             created_at,
             users ( name ),
-            timeslots ( date, time_start, time_end, location )
+            timeslots!inner ( date, time_start, time_end, location )
         `)
         .order('id', { ascending: false });
 
+    if (status) query = query.eq('status', status);
+    if (location) query = query.eq('timeslots.location', location);
+    if (date) query = query.eq('timeslots.date', date);
+
+    const { data: bookings, error } = await query;
+
+    if (error) {
+        console.error('Failed to fetch bookings:', error);
+        return res.status(500).json([]);
+    }
+
     // Flatten the result to match existing frontend expectations
-    const flattened = bookings.map(b => ({
+    const flattened = (bookings || []).map(b => ({
         id: b.id,
         user_name: b.users?.name,
+        booker_name: b.booker_name,
+        booker_phone: b.booker_phone,
         date: b.timeslots?.date,
         time_start: b.timeslots?.time_start,
         time_end: b.timeslots?.time_end,
         location: b.timeslots?.location,
+        status: b.status,
         created_at: b.created_at
     }));
 
@@ -1171,6 +1196,10 @@ app.post('/api/admin/events/matches/save', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`K서바이벌스포츠클럽 Backend running with Supabase at port ${port}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`K서바이벌스포츠클럽 Backend running with Supabase at port ${port}`);
+    });
+}
+
+export default app;
